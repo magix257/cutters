@@ -30,22 +30,36 @@ public class HomeController {
 			File plik = new File(file.getAbsolutePath());
 			Scanner scan = new Scanner(plik);
 			String koniec = "";
+			String typ = "";
+			String szerPap = "";
+			String zeby = "";
 			
 			
 		    	while (scan.hasNextLine()) {
 		    	  
-		    			koniec = koniec.concat(scan.nextLine() + "\n");
-			    
+		    			koniec = scan.nextLine();
+			    if (koniec.contains("|")) {
+			    	typ = koniec.substring(2, 4).trim();
+			    	szerPap = koniec.substring(38, 41);
+			    	zeby = koniec.substring(60, 63).trim();
+			    	FileWriter writer = new FileWriter("F:\\PROGRAMOWANIE\\JAVA\\SPRING\\PROJEKTY\\cutters\\output.txt", true);
+			    	writer.write(typ+"|"+szerPap+"|"+zeby+"\n");
+			    	writer.close();
+			    	//extrakt = extrakt.replaceAll("[\\t\\n\\x0B\\f\\r]{5,7}", "");
+			    }
+			    else {
+			    	
+			    }
 		    	}
 		    	scan.close();
 		    		
-		    	FileWriter writer = new FileWriter("F:\\PROGRAMOWANIE\\JAVA\\SPRING\\PROJEKTY\\cutters\\output.txt");
-		    	writer.write(koniec);
-		    	writer.close();
+		    	
 		    	
 		    
 		
-		m.addAttribute("result", koniec);
+		m.addAttribute("result", typ);
+		m.addAttribute("result2", szerPap);
+		m.addAttribute("result3", zeby);
 			
 			
 			

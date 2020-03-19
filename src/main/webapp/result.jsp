@@ -21,13 +21,17 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Result</th>
+        <th>typ</th>
+        <th>szerPaP</th>
+        <th>zeby</th>
       
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><b>${result}</b></td>
+        <td><b>${result2}</b></td>
+        <td><b>${result3}</b></td>
       </tr>
     </tbody>
   </table>
