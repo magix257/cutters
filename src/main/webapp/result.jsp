@@ -24,6 +24,7 @@
         <th>typ</th>
         <th>szerPaP</th>
         <th>zeby</th>
+        <th>id</th>
       
       </tr>
     </thead>
@@ -32,6 +33,7 @@
         <td><b>${result}</b></td>
         <td><b>${result2}</b></td>
         <td><b>${result3}</b></td>
+        <td><b>${result4}</b></td>
       </tr>
     </tbody>
   </table>
